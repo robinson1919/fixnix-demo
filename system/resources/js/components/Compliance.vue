@@ -12,17 +12,16 @@
       justify="center"
     >
       <template>
-        <v-file-input ref="file" show-size counter multiple label="File input" v-model="data"></v-file-input>
-        <!-- <input class="file-input" type="file" ref="file" name="file"> -->
+        <v-file-input show-size counter multiple label="File input" v-model="data"></v-file-input>
         
-       
-        <v-row >
+        <v-row>
           <v-btn class="ml-5" color="success" @click="uploadFile">Submit</v-btn>
         </v-row>
       </template>
       
     </v-row> 
-
+    
+    
     
   </div>
 </template>
@@ -32,12 +31,13 @@
 import axios from 'axios'
 export default {
   data:() => ({
-    data: '',
+    data: null,
     // csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
     csrf: ''
   }),
   methods: {
     uploadFile(){
+      console.log(this.data[0])
       this.formData = new FormData();
       this.formData.append('name', this.data[0].name);
       this.formData.append('file', this.data[0]);

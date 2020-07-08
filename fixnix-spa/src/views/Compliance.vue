@@ -14,12 +14,13 @@
       <template>
         <v-file-input show-size counter multiple label="File input" v-model="data"></v-file-input>
         
-        <v-row >
+        <v-row>
           <v-btn class="ml-5" color="success" @click="uploadFile">Submit</v-btn>
         </v-row>
       </template>
       
     </v-row> 
+    
 
     
   </div>
@@ -30,7 +31,7 @@
 import axios from 'axios'
 export default {
   data:() => ({
-    data: '',
+    data: null,
     // csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
     csrf: ''
   }),

@@ -86,7 +86,6 @@ export default {
         
         this.insideData.splice(0,3);
 
-        console.log(this.insideData)
         
         
         // for(var i=2; i<this.insideData.length; i++){

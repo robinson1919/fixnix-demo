@@ -168,7 +168,7 @@ class ComplianceController extends Controller
             $compliance->save();
 
             // return response($compliance->jsonSerialize(), Response::HTTP_CREATED);
-            return response("File upload successfully", Response::HTTP_CREATED);
+            return response("File uploaded successfully", Response::HTTP_CREATED);
 
         } else {
             return redirect()->back()
